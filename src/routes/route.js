@@ -10,8 +10,9 @@ import path from 'path';
 const routes = (app) => {
 	app.route('/')
 		.get((req, res) => {
-			console.log(`Get request received`);
-			res.sendFile(path.join(__dirname + '/../../public/welcome.html'));
+			// console.log(`Get request received`);
+			// res.sendFile(path.join(__dirname + '/../../public/welcome.html'));
+			res.send(JSON.stringify({ Hello: 'World'}));
 		});
 
 	app.route('/contacts/all')
